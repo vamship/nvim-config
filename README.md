@@ -79,7 +79,7 @@ config directory for Neovim. The default location for this on a Mac is
 `~/.config/nvim`.
 
 ```zsh
-git clone https://github.com/vamship/nvim-files ~/.config/nvim
+git clone https://github.com/vamship/nvim-config ~/.config/nvim
 ```
 
 The editor configuration relies on a set of external tools to provide utilities
