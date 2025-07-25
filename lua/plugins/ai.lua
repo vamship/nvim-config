@@ -20,14 +20,7 @@ return {
 				end,
 			},
 		},
-		build = function()
-			-- conditionally use the correct build system for the current OS
-			if vim.fn.has("win32") == 1 then
-				return "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-			else
-				return "make"
-			end
-		end,
+		build = ":AvanteBuild",
 		event = "VeryLazy",
 		keys = {
 			{
