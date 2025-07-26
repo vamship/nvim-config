@@ -43,6 +43,7 @@ The general principles behind the keymaps in this configuration are:
    | ----------------- | ---------------------------------------------------------------- |
    | `<leader>?`       | Displays a list of all available keymaps for the current buffer. |
    | `<leader>w`       | Saves contents of all open tabs.                                 |
+   | `<leader>r`       | Runs selected text or text on the current line                   |
 
 # Getting Started
 
