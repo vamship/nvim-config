@@ -59,8 +59,21 @@ In order to start using this, you will need the following:
 - Neovim 0.10 or later. If you have homebrew installed, you can install
   Neovim with the following command:
 
+### A Note on Font Based Icons
+
+Some of the plugins in this configuration use font-based icons to make the
+user interface more visually appealing. To use these icons, you will need
+configure your terminal to use a Nerd Font. This is not strictly necessary, but
+it might make your experience more enjoyable.
+
+I recommend the `Sauce Code Pro` combined with [iterm2](https://iterm2.com/) on
+macOS. The terminal can be configured to use the Nerd font for non-ASCII
+characters, allowing you to choose the font of your choice for text displays.
+
 ```zsh
-brew install neovim
+# Install neovim and a Nerd Font using Homebrew
+
+brew install neovim font-sauce-code-pro-nerd-font
 ```
 
 - You will also likely need a Node.js and a Python 3 environment for external
