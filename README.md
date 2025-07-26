@@ -37,7 +37,6 @@ The general principles behind the keymaps in this configuration are:
    | `<leader>b` | Action taken on the current buffer. Format, preview markdow, etc.        |
    | `<leader>s` | Search-related actions. Search for selected text, clear highlights, etc. |
 
-   
    no follow on key sequences required to perform the action.
 
    | Dedicated Keymaps | Description                                                      |
