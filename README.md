@@ -69,8 +69,8 @@ brew install neovim
   [nvm](https://github.com/nvm-sh/nvm) for Node.js and
   [uv](https://docs.astral.sh/uv/) for Python 3.
 
-  Alternatively, you can use a package manager to install these tools as
-  binaries on your system. The choice is yours.
+  Alternatively, you can use a package manager to install most of these tools
+  as binaries on your system. The choice is yours.
 
 ## Installation
 
@@ -107,8 +107,17 @@ such as foramtting, file search, etc.
   project.
 - `fzf`: A fuzzy finder that is used for searching files in a project.
 
-### Installing it all in one go
+### AI Helpers
+
+- `mcphub`: Allows you to augment LLM agents with access to tools and services
+  using the MCP protocol.
+
+### Installing Tools
 
 ```zsh
+# Install formatters and utilities
 brew install stylua prettier ripgrep fd fzf yapf
+
+# Install MCP Hub for AI helpers
+npm install -g mcp-hub@latest
 ```
