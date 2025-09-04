@@ -19,6 +19,9 @@ return {
 			html = { "prettier" },
 			css = { "prettier" },
             markdown = { "prettier" },
+            sh = { "shfmt" },
+            zsh = { "shfmt" },
+            bash = { "shfmt" },
 		},
 	},
 }
