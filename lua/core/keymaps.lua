@@ -18,8 +18,8 @@ map("n", "<C-h>", "gT", "Go to previous tab")
 -- Allow CTRL+j or CTRL+k to move a line/selection up or down.
 map("n", "<C-j>", ":m+<CR>", "Move current line down")
 map("n", "<C-k>", ":m-2<CR>", "Move current line up")
-map("v", "<C-j>", ":m'>+<CR>", "Move current selection down")
-map("v", "<C-k>", ":m'<-2<CR>", "Move current selection up")
+map("v", "<C-j>", ":m'>+<CR>gv=gv", "Move current selection down")
+map("v", "<C-k>", ":m'<-2<CR>gv=gv", "Move current selection up")
 
 if vim.g.loaded_netrw == 1 then
 	-- Map CTRL+e to open the in-editor file browser if a plugin has not
