@@ -1,3 +1,3 @@
 return {
-    { 'bluz71/nvim-linefly' },
+	{ "bluz71/nvim-linefly" },
 }
