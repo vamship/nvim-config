@@ -110,7 +110,15 @@ return {
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				highlight = { enable = true }, -- Syntax highlighting
-				indent = { enable = true },
+				indent = {
+                    -- Docs say indentation support is experimental, and it
+                    -- causes issues with markdown files, so I'm disabling it
+                    -- for now. Alternatively we could enable this, and just
+                    -- disable it for markdown files:
+					-- disable = { "markdown" },
+
+					enable = false,
+				}, -- Auto indent based on treesitter
 				ensure_installed = {
 					"bash",
 					"c",
