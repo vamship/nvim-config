@@ -9,6 +9,13 @@ return {
 				end,
 				desc = "Format buffer",
 			},
+			{
+				"<leader>tf",
+				function()
+					vim.cmd("tabdo lua require(\"conform\").format()")
+				end,
+				desc = "Format all tabs",
+			},
 		},
 		opts = {
 			formatters_by_ft = {
