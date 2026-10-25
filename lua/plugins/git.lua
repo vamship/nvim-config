@@ -27,11 +27,10 @@ return {
 				local gitsigns = require("gitsigns")
 				local function map(mode, key, command, desc)
 					desc = desc or ""
-					opts = {
+					vim.keymap.set(mode, key, command, {
 						buffer = buf_number,
 						desc = desc,
-					}
-					vim.keymap.set(mode, key, command, opts)
+					})
 				end
 
 				-- Navigation
@@ -68,7 +67,9 @@ return {
 				map("n", "<leader>hp", gitsigns.preview_hunk_inline, "Preview hunk")
 				map("n", "<leader>hP", gitsigns.preview_hunk, "Preview hunk inline")
 
-				map("n", "<leader>hC", gitsigns.show_commit, "Show latest commit")
+				map("n", "<leader>hC", function()
+					gitsigns.show("HEAD")
+				end, "Show latest commit")
 
 				map("n", "<leader>hd", gitsigns.diffthis, "Diff against index")
 				map("n", "<leader>hD", function()
