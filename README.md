@@ -2,7 +2,7 @@
 
 This is a repository containing my personal Neovim configuration files. The
 configuration in this repository full embrace the Lua configuration style and
-are designed to work with Neovim 0.10+.
+are designed to work with Neovim 0.12+.
 
 By using this configuration you will get an opinionated but efficient setup for
 Neovim with sensible defaults and a focus on balancing performance and utility.
@@ -33,9 +33,11 @@ The general principles behind the keymaps in this configuration are:
    | ----------- | ------------------------------------------------------------------------ |
    | `<leader>f` | Find actions. Find files, commits, etc.                                  |
    | `<leader>h` | Git actions. Manage hunks, commit changes, etc.                          |
-   | `<leader>a` | Ad actions. Generate code snippets, refactor code, etc.                  |
-   | `<leader>b` | Action taken on the current buffer. Format, preview markdow, etc.        |
+   | `<leader>a` | AI actions. Claude Code (`ac`, `af`, `ar`, ...) and Copilot (`ap<key>`). |
+   | `<leader>b` | Action taken on the current buffer. Format, preview markdown, etc.       |
+   | `<leader>c` | Code actions. Swap with next/previous argument, function or statement.   |
    | `<leader>s` | Search-related actions. Search for selected text, clear highlights, etc. |
+   | `<leader>t` | Tab actions. Format all open tabs.                                       |
 
    no follow on key sequences required to perform the action.
 
@@ -56,7 +58,7 @@ In order to start using this, you will need the following:
 
 - Ideally a package manager like [Homebrew](https://brew.sh/). This is not
   strictly necessary, but it makes installing the required tools much easier.
-- Neovim 0.10 or later. If you have homebrew installed, you can install
+- Neovim 0.12 or later. If you have homebrew installed, you can install
   Neovim with the following command:
 
 ### A Note on Font Based Icons
@@ -104,9 +106,10 @@ such as foramtting, file search, etc.
 
 - `stylua`: Formatter for Lua code. Useful when editing vim configuration files,
   or if you're a Lua developer.
-- `prettier`: Formatter for JavaScript, TypeScript, HTML, CSS, and other web
-  languages.
-- `yapf`: A formatter for Python code.
+- `prettierd`: Formatter daemon for JavaScript, TypeScript, JSON, HTML, CSS,
+  Markdown and other web languages.
+- `ruff`: Formatter and import organizer for Python code.
+- `shfmt`: Formatter for shell scripts (sh, bash, zsh).
 - `rust toolchain` (optional): If you are a Rust developer, you can install
   the Rust toolchain using `rustup`. This will allow you to use the `rustfmt`
   formatter for Rust code. See
@@ -122,15 +125,14 @@ such as foramtting, file search, etc.
 
 ### AI Helpers
 
-- `mcphub`: Allows you to augment LLM agents with access to tools and services
-  using the MCP protocol.
+- `claude`: The [Claude Code](https://claude.com/claude-code) CLI, used by
+  `claudecode.nvim` to provide an in-editor Claude terminal (`<leader>ac`).
+- GitHub Copilot: provided by `copilot.vim`. Run `:Copilot setup` once to
+  authenticate. Requires Node.js.
 
 ### Installing Tools
 
 ```zsh
 # Install formatters and utilities
-brew install stylua prettier ripgrep fd fzf yapf
-
-# Install MCP Hub for AI helpers
-npm install -g mcp-hub@latest
+brew install stylua prettierd ruff shfmt ripgrep fd fzf
 ```
