@@ -47,6 +47,26 @@ The general principles behind the keymaps in this configuration are:
    | `<leader>w`       | Saves contents of all open tabs.                                 |
    | `<leader>r`       | Runs selected text or text on the current line                   |
 
+## Multiple Cursors
+
+Multiple cursors are provided by
+[multicursor.nvim](https://github.com/jake-stewart/multicursor.nvim). The keys
+mirror the native multicursor support planned for Neovim 0.13, so this plugin
+can be dropped after upgrading.
+
+| Key                 | Mode | Description                                                  |
+| ------------------- | ---- | ------------------------------------------------------------ |
+| `Q`                 | n    | Toggle a cursor at the current position.                     |
+| `[count]Q`          | n    | Add a cursor at every match of the last search.              |
+| `Q`                 | x    | Place a cursor on each selected line.                        |
+| `<c-leftmouse>`     | n, x | Toggle a cursor at the mouse position.                       |
+| `q=`                | n, x | Toggle follow mode (whether motions move all cursors).       |
+| `]C` / `[C`         | n, x | Jump to the next/previous cursor.                            |
+| `g<c-a>`            | n, x | Insert ascending numbers at the cursors.                     |
+| `gQ`                | n    | Restore the last cleared cursors.                            |
+| `<c-l>`             | n, x | Clear all cursors (only while cursors exist).                |
+| `<esc>`             | n, x | Re-enable disabled cursors, otherwise clear (cursors exist). |
+
 # Getting Started
 
 ## Prerequisites
